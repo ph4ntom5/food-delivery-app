@@ -1,0 +1,42 @@
+@use "../../_variables.scss";
+@use "../../_mixins.scss" as *;
+
+.FooterWrapper {
+  margin: 3rem 0rem;
+}
+
+.FooterWrapper p {
+  margin-top: 1rem;
+}
+
+.FooterWrapper img.logo {
+  display: none;
+}
+
+.FooterWrapper p {
+  font-size: 12px;
+  color: variables.$footertext;
+}
+
+.SocialWrapper img {
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.SocialWrapper img.insta {
+  width: 32px;
+}
+
+@include for-size(tablet) {
+  .FooterWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .FooterWrapper img.logo {
+    display: flex;
+  }
+}

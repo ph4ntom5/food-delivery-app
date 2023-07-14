@@ -1,0 +1,76 @@
+@use "../../_variables.scss";
+@use "../../_mixins.scss" as *;
+
+.DownloadWrapper {
+  background-image: none;
+  background-color: variables.$mobilebg;
+  padding-bottom: 7.5rem;
+}
+
+.DownloadWrapper h2 {
+  padding: 0 2rem;
+  font-size: 40px;
+  margin-top: 7.5rem;
+  color: variables.$white;
+  top: 0;
+}
+
+.DownloadWrapper h4 {
+  color: variables.$mobiletext;
+}
+
+.DButtonWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.download-primary {
+  margin-top: 2rem;
+  font-size: 16px;
+  background-color: variables.$orange;
+  border-radius: 10px;
+  padding: 18px 31px;
+  gap: 10px;
+  color: variables.$white;
+  border: none;
+  cursor: pointer;
+}
+
+.download-secondary {
+  margin-top: 2rem;
+  border: 2px solid variables.$white;
+  color: variables.$white;
+  border-radius: 10px;
+  padding: 18px 31px;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@include for-size(tablet) {
+  .DownloadWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/download.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 32.25rem;
+    width: 100%;
+  }
+
+  .DownloadWrapper h2 {
+    top: 0;
+  }
+  .DownloadWrapper h4 {
+    color: variables.$white;
+  }
+
+  button.button-primary,
+  button.button-secondary {
+    font-size: 24px;
+    padding: 1rem 2.65rem;
+    border-radius: 30px;
+  }
+}

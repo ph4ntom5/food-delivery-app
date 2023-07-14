@@ -1,0 +1,75 @@
+@use "../../_variables.scss";
+@use "../../_mixins.scss" as *;
+
+.WorksWrapper {
+  height: 21rem;
+}
+
+.HeadlineWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.phones {
+  width: 95%;
+  transform: translatey(-100px);
+}
+
+h2 {
+  font-size: 24px;
+  color: variables.$black;
+  padding-bottom: 2rem;
+}
+
+hr {
+  width: 100%;
+  background-color: variables.$lightgrey;
+  height: 2px;
+  border: none;
+  margin-bottom: 4rem;
+}
+
+/*Tablet*/
+
+@include for-size(tablet) {
+  .WorksWrapper {
+    height: 35rem;
+  }
+  .phones {
+    width: 95%;
+    transform: translatey(-50px);
+  }
+}
+
+/*Desktop*/
+@include for-size(desktop) {
+  .WorksWrapper {
+    height: 30rem;
+  }
+  .phones {
+    width: 95%;
+    transform: translatey(-110px);
+  }
+  .HeadlineWrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  h2 {
+    position: relative;
+    top: 150px;
+    font-size: 44px;
+    color: variables.$black;
+  }
+
+  hr {
+    width: 100%;
+    background-color: variables.$lightgrey;
+    height: 2px;
+    position: relative;
+    border: none;
+    margin-bottom: 6rem;
+  }
+}

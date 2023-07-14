@@ -1,0 +1,87 @@
+@use "../../_variables.scss";
+@use "../../_mixins.scss" as *;
+
+.StepsWrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.StepsImage .image {
+  order: 2;
+}
+
+.text {
+  order: 1;
+}
+
+img.image {
+  max-width: 95%;
+}
+.text h2 {
+  font-size: 40px;
+  line-height: 57px;
+}
+
+.text h3 {
+  margin-bottom: 2rem;
+  color: variables.$orange;
+  font-size: 24px;
+}
+
+.text h4 {
+  font-size: 24px;
+}
+
+/*Tablet*/
+@include for-size(tablet) {
+  .text h4 {
+    font-size: 24px;
+    color: variables.$darkgrey;
+  }
+}
+
+/*Desktop*/
+@include for-size(desktop) {
+  .StepsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    width: 40rem;
+  }
+
+  .image-right .image {
+    padding-right: 100px;
+    order: 2;
+  }
+
+  .image-right .text {
+    order: 1;
+  }
+
+  .text {
+    padding-left: 6rem;
+  }
+
+  .text h3 {
+    margin-top: -1rem;
+    text-align: left;
+  }
+  .text h2 {
+    padding-right: 15rem;
+    top: 0;
+    line-height: 57px;
+    text-align: left;
+  }
+
+  .text h4 {
+    margin-top: -1rem;
+    padding: 0 20rem 0 0;
+    color: variables.$darkgrey;
+    text-align: left;
+  }
+}

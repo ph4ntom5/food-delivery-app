@@ -1,0 +1,56 @@
+@use "../../_variables.scss";
+@use "../../_mixins.scss" as *;
+
+.ContactHeader {
+  margin-top: 6rem;
+  top: 0;
+}
+
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: min-content;
+  margin: 0 auto;
+}
+
+.contact-us__input,
+.contact-us__input-area {
+  font-size: 24px;
+  border-radius: 30px;
+  outline: none;
+}
+
+.contact-us__input {
+  height: 68px;
+  font-size: 24px;
+  padding: 0 30px;
+}
+
+.contact-us__input-area {
+  height: 200px;
+  padding: 30px;
+}
+
+.contact-us__error {
+  color: variables.$orange;
+  align-self: flex-start;
+}
+
+.contact-us_sent-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 0 auto;
+  font-size: 32px;
+  padding: 50px;
+}
+
+@include for-size(tablet) {
+  .contact-us__input,
+  .contact-us__input-area {
+    width: 400px;
+  }
+}

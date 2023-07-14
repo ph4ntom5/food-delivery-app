@@ -1,0 +1,47 @@
+@use "../../_variables.scss";
+@use "../../_mixins.scss" as *;
+.button-primary,
+.button-secondary {
+  margin-top: 2rem;
+  color: variables.$white;
+  font-size: 24px;
+  padding: 1rem 3.65rem;
+  border-radius: 30px;
+  border: none;
+  height: 68px;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: variables.$orange;
+  border-radius: 30px;
+  box-shadow: 0px 40px 40px variables.$btnshadow;
+}
+
+.button-primary:hover {
+  background-color: variables.$white;
+  color: variables.$orange;
+  transition: color 0.5s ease-in-out;
+}
+
+.button-secondary {
+  color: variables.$orange;
+  background-color: transparent;
+  border: 1px solid variables.$orange;
+  border-radius: 30px;
+}
+
+.button-secondary:hover {
+  background-color: variables.$white;
+  color: variables.$orange;
+  transition: color 0.5s ease-in-out;
+}
+
+@include for-size(tablet) {
+  .button-secondary {
+    margin-left: 2rem;
+    color: variables.$white;
+    background-color: transparent;
+    border: 1px solid variables.$white;
+  }
+}
