@@ -41,7 +41,7 @@ img.image {
   }
 }
 
-/* Desktop */
+/*Desktop*/
 @include for-size(desktop) {
   .StepsWrapper {
     display: flex;
