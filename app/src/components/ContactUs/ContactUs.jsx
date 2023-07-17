@@ -12,7 +12,7 @@ const ContactUs = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const apiUrl = "http://localhost:8081/contact-us";
+    const apiUrl = `${import.meta.env.VITE_HOST}/contact-us`;
     console.log("Form data:", data);
     fetch(apiUrl, {
       headers: {
