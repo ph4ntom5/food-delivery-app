@@ -12,7 +12,8 @@ const ContactUs = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const apiUrl = `${import.meta.env.VITE_HOST}/contact-us`;
+    const hostAddress = import.meta.env.VITE_HOST || window.location.origin;
+    const apiUrl = `${hostAddress}/contact-us`;
     console.log("Form data:", data);
     fetch(apiUrl, {
       headers: {
