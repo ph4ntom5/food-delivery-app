@@ -1,4 +1,4 @@
-# JavaGuru Basics of Front-End Development Course Final Project  - Food Delivery App 
+# JavaGuru Basics of Front-End Development Course Final Project - Food Delivery App
 
 ## Table of contents
 
@@ -27,7 +27,7 @@ Desktop layout screenshot.
 ### Links
 
 - Solution URL: [Github Rep.](https://github.com/ph4ntom5/food-delivery-app)
-- Live Site URL: [Live version](coming soon...)
+- Live Site URL: [Live version](https://java-guru-food-delivery-server.azurewebsites.net)
 
 ### Built with
 
