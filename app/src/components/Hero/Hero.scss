@@ -3,7 +3,6 @@
 @use "../../index.scss";
 
 .HeroWrapper {
-  margin-top: 6rem;
   padding-top: 3.125rem;
   background-color: variables.$herobg;
   background-image: none;
@@ -39,7 +38,6 @@ h4 {
 @include for-size(tablet) {
   .HeroWrapper {
     max-width: 1440px;
-    margin-top: 6rem;
     background-image: url("../../assets/herobg.webp");
     background-repeat: no-repeat;
     background-size: cover;
