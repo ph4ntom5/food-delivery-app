@@ -48,25 +48,43 @@ const ContactUs = () => {
           <input
             className="contact-us__input"
             placeholder="John Doe"
-            {...register("name", { required: true })}
+            {...register("name", {
+              required: "This is required.",
+              minLength: {
+                value: 2,
+                message: "Minimum length is 2 characters",
+              },
+            })}
           />
           {errors.name && (
-            <span className="contact-us__error">This field is required</span>
+            <span className="contact-us__error">{errors.name.message}</span>
           )}
           <input
             className="contact-us__input"
             placeholder="john.doe@gmail.com"
-            {...register("email", { required: true })}
+            {...register("email", {
+              required: "This is required.",
+              pattern: {
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i,
+                message: "Invalid email address",
+              },
+            })}
           />
           {errors.email && (
-            <span className="contact-us__error">This field is required</span>
+            <span className="contact-us__error">{errors.email.message}</span>
           )}
           <textarea
             className="contact-us__input-area"
-            {...register("message", { required: true })}
+            {...register("message", {
+              required: "This is required.",
+              minLength: {
+                value: 2,
+                message: "Minimum length is 2 characters",
+              },
+            })}
           />
           {errors.message && (
-            <span className="contact-us__error">This field is required</span>
+            <span className="contact-us__error">{errors.message.message}</span>
           )}
           <Button variant="primary" label="Send" type="submit" />
         </form>
