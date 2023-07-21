@@ -39,4 +39,11 @@
   .FooterWrapper img.logo {
     display: flex;
   }
+  .SocialWrapper img {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+  .SocialWrapper img:hover {
+    transform: translateY(-10px);
+  }
 }
